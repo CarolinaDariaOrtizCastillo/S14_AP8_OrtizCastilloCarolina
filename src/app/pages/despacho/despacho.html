@@ -1,0 +1,92 @@
+<app-navbar></app-navbar>
+
+<div class="dispatch-banner">
+    <div class="banner-overlay">
+        <span class="badge-tag">Módulo de Distribución</span>
+        <h1>Despacho y Seguimiento Courier</h1>
+        <p>Planificación de rutas, asignación estratégica de transportistas y control de entregas físicas en tiempo
+            real.</p>
+    </div>
+</div>
+
+<div class="dispatch-container">
+    <div class="section-title-box">
+        <h2>Carril III: Logística de Salida y Distribución</h2>
+        <p class="subtitle">Monitoreo del estado de las entregas y sincronización de operadores logísticos externos.</p>
+    </div>
+
+    <div class="routes-grid">
+
+        <div class="route-card status-border-transit">
+            <div class="route-header">
+                <span class="delivery-icon">🚚</span>
+                <span class="status-pill pill-transit">En Ruta</span>
+            </div>
+            <h3>Pedido #1022</h3>
+            <div class="route-details">
+                <p><strong>Destino:</strong> Zona Industrial Sector Norte</p>
+                <p><strong>Asignado a:</strong> Transportes Courier Alfa</p>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar text-transit" style="width: 65%"></div>
+            </div>
+            <p class="route-desc">En ruta de entrega física al cliente. Sincronizado con GPS.</p>
+        </div>
+
+        <div class="route-card status-border-delivered">
+            <div class="route-header">
+                <span class="delivery-icon">✅</span>
+                <span class="status-pill pill-delivered">Entregado</span>
+            </div>
+            <h3>Pedido #1021</h3>
+            <div class="route-details">
+                <p><strong>Destino:</strong> Fundo Agropecuario Los Olivos</p>
+                <p><strong>Recibido por:</strong> Carlos Mendoza (Firma Digital)</p>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar bg-delivered" style="width: 100%"></div>
+            </div>
+            <p class="route-desc">Registrado como "Entregado" con éxito en la aplicación móvil.</p>
+        </div>
+
+    </div>
+
+    <div class="logistics-panel">
+        <div class="panel-header">
+            <span class="pulse-indicator-blue"></span>
+            <h3>📋 Hoja de Ruta Semanal y Flujo Operativo</h3>
+        </div>
+
+        <div class="panel-body">
+            <p class="panel-intro">
+                Al recibir las órdenes listas desde el carril de producción, el sistema ejecuta la siguiente secuencia
+                lógica:
+            </p>
+
+            <div class="timeline-bpm">
+                <div class="timeline-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h5>Registrar entrega en App</h5>
+                        <p>Se genera el código de barras y el manifiesto de carga digital para el transportista
+                            asignado.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h5>Planificar fecha y hora de entrega</h5>
+                        <p>Optimización algorítmica de ventanas horarias para reducir la huella de carbono y tiempos de
+                            espera.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-footer">
+            <strong>Siguiente carril (Transición BPM):</strong> Al marcarse el pedido como "Completado", el flujo evalúa
+            si es la primera vez que se usa el producto para derivarlo a <strong>Asesoría Técnica - Postventa</strong>.
+        </div>
+    </div>
+</div>

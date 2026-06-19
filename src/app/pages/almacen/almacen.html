@@ -1,0 +1,85 @@
+<app-navbar></app-navbar>
+
+<div class="storage-banner">
+    <div class="banner-overlay">
+        <span class="badge-tag">Módulo Sincronizado</span>
+        <h1>Gestión de Almacén y Logística</h1>
+        <p>Administración de existencias físicas, cálculo automatizado de insumos químicos e inventariado para la
+            preparación de paquetes.</p>
+    </div>
+</div>
+
+<div class="storage-container">
+    <div class="section-title-box">
+        <h2>Carril II: Control de Inventario y Producción</h2>
+        <p class="subtitle">Monitoreo de materias primas para la elaboración y despacho de pedidos aprobados.</p>
+    </div>
+
+    <div class="inventory-grid">
+
+        <div class="product-card border-success">
+            <div class="product-header">
+                <span class="product-icon">📦</span>
+                <span class="status-badge badge-green">Stock Óptimo</span>
+            </div>
+            <h3>Producto A (Insumos Base)</h3>
+            <div class="stock-counter">
+                <span class="number">45</span> <span class="unit">unidades disponibles</span>
+            </div>
+            <p class="product-desc">Material listo y verificado para empaque inmediato.</p>
+        </div>
+
+        <div class="product-card border-warning">
+            <div class="product-header">
+                <span class="product-icon">📦</span>
+                <span class="status-badge badge-orange">Stock Mínimo</span>
+            </div>
+            <h3>Producto B (Herramientas / Riego)</h3>
+            <div class="stock-counter">
+                <span class="number">12</span> <span class="unit">unidades disponibles</span>
+            </div>
+            <p class="product-desc">Cantidad próxima al límite de seguridad. Requiere atención.</p>
+        </div>
+
+        <div class="product-card border-danger">
+            <div class="product-header">
+                <span class="product-icon">⚠️</span>
+                <span class="status-badge badge-red">Quiebre de Stock</span>
+            </div>
+            <h3>Producto C (Fertilizante Premium X)</h3>
+            <div class="stock-counter text-red">
+                <span class="number">0</span> <span class="unit">unidades disponibles</span>
+            </div>
+            <p class="product-desc">Nivel crítico detectado. El sistema ha bloqueado las salidas automáticas.</p>
+        </div>
+
+    </div>
+
+    <div class="alert-dashboard">
+        <div class="alert-header">
+            <span class="pulse-indicator-red"></span>
+            <h3>⚠️ Alerta de Sistema: Protocolo Automático Iniciado</h3>
+        </div>
+
+        <div class="alert-body">
+            <p>
+                Debido al desabastecimiento del <strong>Producto C</strong>, la arquitectura BPM ha ejecutado de forma
+                transparente las siguientes acciones de control de manera simulada:
+            </p>
+
+            <ul class="log-list">
+                <li><span class="log-bullet">🔴</span> <strong>Generar alerta de semáforo:</strong> Canal de ventas
+                    notificado para pausar compras directas de este lote.</li>
+                <li><span class="log-bullet">🔄</span> <strong>Reabastecer insumos necesarios:</strong> Solicitud de
+                    compra enviada automáticamente a proveedores externos de materia prima.</li>
+                <li><span class="log-bullet">📐</span> <strong>Calcular insumos con App:</strong> Esperando reingreso
+                    para ejecutar balance de fórmulas químicas.</li>
+            </ul>
+        </div>
+
+        <div class="alert-footer">
+            <strong>Siguiente fase en espera:</strong> Una vez nivelado el stock, el pedido pasa al carril de
+            <strong>Despacho / Courier</strong>.
+        </div>
+    </div>
+</div>

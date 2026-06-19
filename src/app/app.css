@@ -1,0 +1,25 @@
+/* --- Contenedor Principal del Navbar --- */
+nav {
+  background-color: #0f172a; /* Azul oscuro elegante */
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+  padding: 0 30px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribuye el logo a la izquierda y menú a la derecha */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Asegura que se mantenga arriba al hacer scroll */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* --- Simulación de Marca o Logotipo --- */
+nav::before {
+  content: "🌱 AgroTecno";
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.5px;
+}
+
