@@ -10,9 +10,21 @@ import { Despacho } from './pages/despacho/despacho';
 import { Postventa } from './pages/postventa/postventa';
 import { Login } from './pages/login/login';
 import { NavbarComponent } from './components/navbar/navbar';
+import { Dashboard } from './pages/dashboard/dashboard';
+import { Equipo } from './pages/equipo/equipo';
 
 @NgModule({
-  declarations: [App, HomeComponent, Almacen, Despacho, Postventa, Login, NavbarComponent],
+  declarations: [
+    App,
+    HomeComponent,
+    Almacen,
+    Despacho,
+    Postventa,
+    Login,
+    NavbarComponent,
+    Dashboard,
+    Equipo,
+  ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],

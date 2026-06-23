@@ -1,0 +1,75 @@
+<app-navbar></app-navbar>
+
+<div class="equipo-container page-animate">
+    <div class="equipo-banner">
+        <div class="banner-overlay">
+            <span class="badge-tag">Recursos Humanos</span>
+            <h1>Control de Operarios y Personal</h1>
+            <p>Supervisión de estados, disponibilidad y asignación de tareas logísticas en tiempo real.</p>
+        </div>
+    </div>
+
+    <div class="toolbar">
+        <h2>Personal Registrado ({{ operarios.length }})</h2>
+        <button class="add-btn" (click)="toggleFormulario()">+ Agregar Operario</button>
+    </div>
+
+    <div class="team-grid">
+        <div class="team-card" *ngFor="let operario of operarios">
+            <div class="avatar-status-wrapper">
+                <div class="avatar">{{ operario.avatar }}</div>
+                <span class="status-dot" [ngClass]="operario.status"></span>
+            </div>
+
+            <div class="team-card-info">
+                <h3>{{ operario.nombre }}</h3>
+                <span class="role">{{ operario.role }}</span>
+                <p class="zone">📍 Área: {{ operario.zone }}</p>
+            </div>
+
+            <div class="card-footer">
+                <button class="action-btn" [disabled]="operario.status === 'offline'">
+                    {{ operario.status === 'offline' ? 'Fuera de Turno' : 'Asignar Tarea' }}
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-sidebar" *ngIf="mostrarFormulario">
+        <div class="form-header">
+            <h3>Nuevo Operario</h3>
+            <button class="close-btn" (click)="toggleFormulario()">✕</button>
+        </div>
+
+        <form class="simple-form"
+            (submit)="agregarOperario(nombre.value, avatar.value, role.value, zone.value, $event)">
+            <div class="form-group">
+                <label>Nombre Completo</label>
+                <input #nombre type="text" placeholder="Ej. Juan Pérez" required>
+            </div>
+
+            <div class="form-group">
+                <label>Iniciales para Avatar</label>
+                <input #avatar type="text" maxlength="2" placeholder="Ej. JP" style="text-transform: uppercase;"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label>Rol / Cargo</label>
+                <input #role type="text" placeholder="Ej. Transportista, Supervisor" required>
+            </div>
+
+            <div class="form-group">
+                <label>Área de Trabajo</label>
+                <input #zone type="text" placeholder="Ej. Almacén Químico, Despacho" required>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn-secondary" (click)="toggleFormulario()">Cancelar</button>
+                <button type="submit" class="btn-primary">Guardar Operario</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-overlay" *ngIf="mostrarFormulario" (click)="toggleFormulario()"></div>
+</div>

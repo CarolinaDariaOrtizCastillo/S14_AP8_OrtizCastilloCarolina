@@ -1,0 +1,345 @@
+.equipo-container {
+    padding: 0 32px 40px 32px;
+    box-sizing: border-box;
+}
+
+/* Banner de Cabecera */
+.equipo-banner {
+    background: linear-gradient(135deg, #06152d 0%, #1a355e 100%);
+    border-radius: 12px;
+    color: white;
+    margin-bottom: 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.banner-overlay {
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.badge-tag {
+    background-color: #24d3b5;
+    color: #06152d;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.equipo-banner h1 {
+    font-size: 2rem;
+    margin: 12px 0 8px 0;
+    font-weight: 700;
+}
+
+.equipo-banner p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Barra de herramientas superior */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.toolbar h2 {
+    margin: 0;
+    color: #06152d;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.add-btn {
+    background-color: #06152d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.add-btn:hover {
+    background-color: #24d3b5;
+    color: #06152d;
+    box-shadow: 0 4px 12px rgba(36, 211, 181, 0.3);
+}
+
+/* Grid de Tarjetas adaptado a filas horizontales */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Más ancho para emular tus bloques de KPI */
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tarjeta estructurada horizontalmente como tu módulo de Ventas */
+.team-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    box-shadow: 0 4px 12px rgba(6, 21, 45, 0.03);
+    border: 1px solid #eef2f6;
+    
+    display: flex;
+    flex-direction: row; /* Cambio clave: elementos en fila */
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+/* Contenedor del Avatar a la izquierda */
+.avatar-status-wrapper {
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* Círculo sutil en tonos suaves corporativos */
+.avatar {
+    background-color: rgba(6, 21, 45, 0.08); /* Fondo pastel para que no compita con el Navbar */
+    color: #06152d;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Puntos de presencia en la esquina inferior derecha del avatar */
+.status-dot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+
+.online { background-color: #24d3b5; }
+.busy { background-color: #e53935; }
+.offline { background-color: #94a3b8; }
+
+/* Bloque central de información de texto */
+.team-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex-grow: 1; /* Ocupa el espacio intermedio */
+}
+
+.team-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #06152d;
+    font-weight: 700;
+}
+
+.role {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.zone {
+    font-size: 0.8rem;
+    color: #475569;
+    margin: 4px 0 0 0;
+    font-weight: 500;
+}
+
+/* Contenedor del Botón en el extremo derecho */
+.card-footer {
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.action-btn {
+    background-color: #ffffff;
+    color: #06152d;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease-in-out;
+}
+
+.action-btn:hover:not([disabled]) {
+    border-color: #06152d;
+    background-color: #06152d;
+    color: #ffffff;
+}
+
+.action-btn:disabled {
+    border-color: #e2e8f0;
+    color: #94a3b8;
+    background: #f1f5f9;
+    cursor: not-allowed;
+}
+
+/* ==========================================================================
+   PANEL LATERAL: FORMULARIO DE NUEVO OPERARIO
+   ========================================================================== */
+
+/* Fondo oscuro detrás del formulario */
+.form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(6, 21, 45, 0.4); /* Tu azul oscuro con transparencia */
+    z-index: 2000;
+    backdrop-filter: blur(2px);
+}
+
+/* Panel flotante lateral derecho */
+.form-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: -4px 0 25px rgba(6, 21, 45, 0.15);
+    z-index: 2001;
+    padding: 32px 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    animation: slideIn 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+/* Encabezado del Formulario */
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 12px;
+}
+
+.form-header h3 {
+    margin: 0;
+    color: #06152d;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.close-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    color: #64748b;
+    cursor: pointer;
+    padding: 4px 8px;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #e53935;
+}
+
+/* Elementos del Formulario */
+.simple-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #06152d;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #06152d;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: #06152d;
+    box-shadow: 0 0 0 3px rgba(6, 21, 45, 0.1);
+    outline: none;
+}
+
+/* Botonera de Acción Inferior */
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.form-actions button {
+    flex: 1;
+    padding: 12px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-secondary {
+    background: #f1f5f9;
+    color: #64748b;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.btn-primary {
+    background: #06152d;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #24d3b5;
+    color: #06152d;
+    box-shadow: 0 4px 12px rgba(36, 211, 181, 0.25);
+}

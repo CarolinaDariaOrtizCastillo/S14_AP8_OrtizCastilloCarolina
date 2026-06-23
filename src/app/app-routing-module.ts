@@ -7,6 +7,8 @@ import { HomeComponent } from './pages/home/home';
 import { Almacen } from './pages/almacen/almacen';
 import { Despacho } from './pages/despacho/despacho';
 import { Postventa } from './pages/postventa/postventa';
+import { Dashboard } from './pages/dashboard/dashboard';
+import { Equipo } from './pages/equipo/equipo';
 
 // 2. Definimos las rutas de navegación para la tienda
 const routes: Routes = [
@@ -26,6 +28,10 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'dashboard',
+    component: Dashboard
+  },
+  {
     path: 'almacen',
     component: Almacen
   },
@@ -36,6 +42,10 @@ const routes: Routes = [
   {
     path: 'postventa',
     component: Postventa
+  },
+  {
+    path: 'equipo',
+    component: Equipo
   }
 ];
 

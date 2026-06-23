@@ -1,0 +1,75 @@
+<app-navbar></app-navbar>
+
+<div class="dashboard-container page-animate">
+    <div class="dashboard-banner">
+        <div class="banner-overlay">
+            <span class="badge-tag">Panel General</span>
+            <h1>Métricas y Rendimiento Global</h1>
+            <p>Monitoreo en tiempo real de operaciones logísticas, flujo de ventas y alertas críticas de insumos.</p>
+        </div>
+    </div>
+
+    <div class="kpi-grid">
+        <div class="kpi-card">
+            <div class="kpi-icon icon-blue">📊</div>
+            <div class="kpi-info">
+                <span>Ventas del Mes</span>
+                <h3>$42,850</h3>
+            </div>
+        </div>
+        <div class="kpi-card alert-critical">
+            <div class="kpi-icon icon-red">⚠️</div>
+            <div class="kpi-info">
+                <span>Stock Crítico Químicos</span>
+                <h3>3 Insumos</h3>
+            </div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-icon icon-green">🚚</div>
+            <div class="kpi-info">
+                <span>Despachos Hoy</span>
+                <h3>18 Envíos</h3>
+            </div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-icon icon-purple">💬</div>
+            <div class="kpi-info">
+                <span>Casos Postventa</span>
+                <h3>2 Abiertos</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-content-grid">
+        <div class="content-card">
+            <h2>Rendimiento Operativo Semanal</h2>
+            <p class="section-desc">Flujo de paquetes preparados vs órdenes despachadas.</p>
+            <div class="chart-placeholder">
+                <div class="bar" style="height: 40%"><span>Lun</span></div>
+                <div class="bar" style="height: 65%"><span>Mar</span></div>
+                <div class="bar" style="height: 85%"><span>Mié</span></div>
+                <div class="bar" style="height: 50%"><span>Jue</span></div>
+                <div class="bar" style="height: 95%"><span>Vie</span></div>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h2>Últimas Actividades del Sistema</h2>
+            <p class="section-desc">Historial de acciones de operarios en tiempo real.</p>
+            <ul class="activity-list">
+                <li>
+                    <span class="time">Hace 5m</span>
+                    <p><strong>Carlos M.</strong> registró la salida de 50L de Fertilizante Nitrógeno en Almacén.</p>
+                </li>
+                <li>
+                    <span class="time">Hace 12m</span>
+                    <p><strong>Ramiro G.</strong> cambió el estado de la Orden #1042 a "En Ruta" en Despacho.</p>
+                </li>
+                <li>
+                    <span class="time">Hace 1h</span>
+                    <p>Nueva solicitud de soporte técnico asignada al módulo de Postventa.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
